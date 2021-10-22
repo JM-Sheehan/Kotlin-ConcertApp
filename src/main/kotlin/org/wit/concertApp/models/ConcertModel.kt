@@ -4,7 +4,7 @@ import java.net.Inet4Address
 
 data class ConcertModel
     (
-    var id : Long = 0,
+    var concertId : Long = 0,
     var date : String = "",
     var headlineAct : String = "",
     var supportingActs : ArrayList<String> = ArrayList<String>(),
