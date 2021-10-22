@@ -1,4 +1,4 @@
-package org.wit.concertApp.models
+package org.wit.concertApp.console.models
 
 data class UserModel
     (

@@ -1,9 +1,6 @@
-package org.wit.concertApp.views
+package org.wit.concertApp.console.views
 
-import org.wit.concertApp.models.ConcertMemStore
-import org.wit.concertApp.models.ConcertModel
-import org.wit.concertApp.models.UserMemStore
-import org.wit.concertApp.models.UserModel
+import org.wit.concertApp.console.models.*
 
 class ConcertView {
 
@@ -169,7 +166,7 @@ class ConcertView {
         return false
     }
 
-    fun listConcerts(concerts : ConcertMemStore){
+    fun listConcerts(concerts : ConcertJSONStore){
         println("List All Concerts")
         println()
         concerts.logAll()
@@ -210,7 +207,7 @@ class ConcertView {
         return false
     }
 
-    fun listUsers(users : UserMemStore) {
+    fun listUsers(users : UserJSONStore) {
         println("List All Users")
         println()
         users.logAll()

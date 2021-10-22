@@ -1,6 +1,4 @@
-package org.wit.concertApp.models
-
-import java.net.Inet4Address
+package org.wit.concertApp.console.models
 
 data class ConcertModel
     (

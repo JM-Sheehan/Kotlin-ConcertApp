@@ -1,7 +1,6 @@
-package org.wit.concertApp.main
+package org.wit.concertApp.console.main
 
-import mu.KotlinLogging
-import org.wit.concertApp.controllers.ConcertController
+import org.wit.concertApp.console.controllers.ConcertController
 
 fun main(args: Array<String>) {
     ConcertController().start()

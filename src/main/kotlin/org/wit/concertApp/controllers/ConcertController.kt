@@ -1,16 +1,11 @@
-package org.wit.concertApp.controllers
+package org.wit.concertApp.console.controllers
 import  mu.KotlinLogging
-import org.wit.concertApp.main.*
-import org.wit.concertApp.models.ConcertMemStore
-import org.wit.concertApp.models.ConcertModel
-import org.wit.concertApp.models.UserMemStore
-import org.wit.concertApp.models.UserModel
-import org.wit.concertApp.views.ConcertView
-import kotlin.math.log
+import org.wit.concertApp.console.models.*
+import org.wit.concertApp.console.views.ConcertView
 
 class ConcertController {
-    val users = UserMemStore()
-    val concerts = ConcertMemStore()
+    val users = UserJSONStore()
+    val concerts = ConcertJSONStore()
     val concertView = ConcertView()
     val logger = KotlinLogging.logger {}
 
@@ -90,8 +85,9 @@ class ConcertController {
         val aConcert = searchConcert(searchId)
 
         if (aConcert != null) {
-            concerts.delete(searchId)
+            concerts.delete(aConcert)
             logger.info { "Concert Deleted " }
+            concertView.listConcerts(concerts)
         } else {
             logger.info { "Concert Not Deleted" }
         }
@@ -144,8 +140,9 @@ class ConcertController {
         val aUser = searchUser(searchId)
 
         if (aUser != null) {
-            users.delete(searchId)
+            users.delete(aUser)
             logger.info { "User Deleted " }
+            concertView.listUsers(users)
         } else {
             logger.info { "User Not Deleted" }
         }

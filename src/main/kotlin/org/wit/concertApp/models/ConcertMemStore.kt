@@ -1,4 +1,5 @@
-package org.wit.concertApp.models
+package org.wit.concertApp.console.models
+
 
 import mu.KotlinLogging
 
@@ -40,8 +41,8 @@ class ConcertMemStore : ConcertStore {
         }
     }
 
-    override fun delete(id: Long){
-        concerts.removeAll({it.concertId == id})
+    override fun delete(concert: ConcertModel){
+        concerts.remove(concert)
     }
 
     internal fun logAll() {

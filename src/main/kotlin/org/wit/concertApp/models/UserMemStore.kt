@@ -1,4 +1,4 @@
-package org.wit.concertApp.models
+package org.wit.concertApp.console.models
 
 import mu.KotlinLogging
 
@@ -37,8 +37,8 @@ class UserMemStore : UserStore {
         }
     }
 
-    override fun delete(id: Long){
-        users.removeAll({it.userId == id})
+    override fun delete(user : UserModel){
+        users.remove(user)
     }
 
     override fun attendConcert(user : UserModel, concertId: Long) {
