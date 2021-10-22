@@ -35,7 +35,6 @@ class ConcertMemStore : ConcertStore {
         if (foundConcert != null) {
             foundConcert.date = concert.date
             foundConcert.headlineAct = concert.headlineAct
-            foundConcert.supportingActs = concert.supportingActs
             foundConcert.url = concert.url
             foundConcert.address = concert.address
         }

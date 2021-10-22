@@ -42,7 +42,7 @@ class UserMemStore : UserStore {
     }
 
     override fun attendConcert(user : UserModel, concertId: Long) {
-        var foundUser = findOne(user.userId)
+        var foundUser = findOne(user.userId!!)
         if(foundUser != null){
             foundUser.upcomingConcerts.add(concertId)
         }

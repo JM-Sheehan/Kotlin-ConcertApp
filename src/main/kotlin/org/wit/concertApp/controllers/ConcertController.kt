@@ -168,25 +168,25 @@ class ConcertController {
     fun dummyData() {
         concerts.create(
             (ConcertModel(
-                date = "24-05-2020", headlineAct = "Foo Fighters", supportingActs = ArrayList<String>(),
+                date = "2020-04-23", headlineAct = "Foo Fighters",
                 url = "www.foo.com", address = "37 Foovile"
             ))
         )
         concerts.create(
             (ConcertModel(
-                date = "30-03-1993", headlineAct = "Led Zepplin", supportingActs = ArrayList<String>(),
+                date = "1993-03-30", headlineAct = "Led Zepplin",
                 url = "www.zeddy.com", address = "20 Zepperoni Street"
             ))
         )
         concerts.create(
             (ConcertModel(
-                date = "09-11-2013", headlineAct = "Ed Sheeran", supportingActs = ArrayList<String>(),
+                date = "2013-11-09", headlineAct = "Ed Sheeran",
                 url = "www.ginger.com", address = "59 Picadilly"
             ))
         )
 
-        users.create((UserModel(firstName = "Jamie", lastName = "Sheehan")))
-        users.create((UserModel(firstName = "Paddi", lastName = "Long")))
-        users.create((UserModel(firstName = "Cooper", lastName = "Sheehan")))
+        users.create((UserModel(firstName = "John", lastName = "Doe")))
+        users.create((UserModel(firstName = "Don", lastName = "Smith")))
+        users.create((UserModel(firstName = "Jane", lastName = "Adams")))
     }
 }

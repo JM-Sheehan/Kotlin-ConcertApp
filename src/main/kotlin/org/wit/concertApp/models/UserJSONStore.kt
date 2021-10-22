@@ -34,7 +34,7 @@ class UserJSONStore : UserStore{
     }
 
     override fun create(user: UserModel) {
-        user.userId = getUserId()
+        user.userId = generateRandomUserId()
         users.add(user)
         logAll()
         serialize()
@@ -55,7 +55,7 @@ class UserJSONStore : UserStore{
     }
 
     override fun attendConcert(user : UserModel, concertId: Long) {
-        var foundUser = findOne(user.userId)
+        var foundUser = findOne(user.userId!!)
         if(foundUser != null){
             foundUser.upcomingConcerts.add(concertId)
         }

@@ -46,20 +46,6 @@ class ConcertView {
         println("Enter Headline Act")
         concert.headlineAct= readLine()!!
 
-        var addingActs : Boolean = true
-
-        do {
-            println("Want to Add Supporting Acts y/n")
-            var character : Char = readLine()!!.first()
-            if ( character == 'y'){
-                println("Enter Act Name")
-                val act = readLine()!!
-                concert.supportingActs.add(act)
-            }
-            else if( character == 'n' ){
-                addingActs = false
-            }
-        }while (addingActs)
 
         println("Enter Web Link")
         concert.url = readLine()!!
@@ -110,31 +96,6 @@ class ConcertView {
                 tempHeadlineAct = concert.headlineAct
             }
 
-            println("Change Supporting Acts y/n")
-            if(readLine()!!.first() == 'y'){
-                var addingActs : Boolean = true
-
-                do {
-                    println("Want to Add Supporting Acts y/n")
-                    var character : Char
-                    character = readLine()!!.first()
-                    if ( character == 'y'){
-                        println("Enter Act Name")
-                        val act = readLine()!!
-                        if(act.isNotEmpty()){
-                            tempSupportingActs.add(act)
-                        }
-                    }
-                    else if( character == 'n' ){
-                        addingActs = false
-                    }
-                }while (addingActs)
-
-            }
-            else{
-                tempSupportingActs = concert.supportingActs
-            }
-
             println("Change Web Link y/n")
             if (readLine()!!.first() == 'y'){
                 println("Enter Web Link")
@@ -156,7 +117,6 @@ class ConcertView {
                 &&!tempUrl.isNullOrEmpty()){
                 concert.date = tempDate
                 concert.headlineAct = tempHeadlineAct
-                concert.supportingActs = tempSupportingActs
                 concert.url = tempUrl
                 concert.address = tempAddress
 

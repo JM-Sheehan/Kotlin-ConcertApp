@@ -33,7 +33,7 @@ class ConcertJSONStore : ConcertStore{
     }
 
     override fun create(concert: ConcertModel) {
-        concert.concertId = getConcertId()
+        concert.concertId = generateRandomConcertId()
         concerts.add(concert)
         logAll()
         serialize()
@@ -44,7 +44,6 @@ class ConcertJSONStore : ConcertStore{
         if (foundConcert != null) {
             foundConcert.date = concert.date
             foundConcert.headlineAct = concert.headlineAct
-            foundConcert.supportingActs = concert.supportingActs
             foundConcert.url = concert.url
             foundConcert.address = concert.address
         }
@@ -61,12 +60,12 @@ class ConcertJSONStore : ConcertStore{
     }
 
     private fun serialize() {
-        val jsonString = usersGsonBuilder.toJson(concerts, usersListType)
+        val jsonString = concertGsonBuilder.toJson(concerts, concertListType)
         write(CONCERT_JSON_FILE, jsonString)
     }
 
     private fun deserialize() {
         val jsonString = read(CONCERT_JSON_FILE)
-        concerts = Gson().fromJson(jsonString, usersListType)
+        concerts = Gson().fromJson(jsonString, concertListType)
     }
 }
