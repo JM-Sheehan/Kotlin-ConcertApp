@@ -9,7 +9,7 @@ import java.util.*
 
 private val logger = KotlinLogging.logger {}
 
-private val USERS_JSON_FILE = "users.json"
+var USERS_JSON_FILE = "users.json"
 val usersGsonBuilder = GsonBuilder().setPrettyPrinting().create()
 val usersListType = object : TypeToken<java.util.ArrayList<UserModel>>() {}.type
 

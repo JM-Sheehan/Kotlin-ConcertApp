@@ -1,5 +1,6 @@
 package org.wit.concertApp.console.views
 
+import javafx.geometry.Pos
 import org.wit.concertApp.console.controllers.ConcertController
 import org.wit.concertApp.console.controllers.ConcertUIController
 import org.wit.concertApp.console.models.UserModel
@@ -32,6 +33,8 @@ class UsersScreen : View("Users Editor") {
             right{
                 form{
                     fieldset ("Edit User"){
+                        alignment = Pos.CENTER
+                        spacing = 10.0
                         field("First Name"){
                             textfield(model.firstName)
                         }
@@ -39,6 +42,8 @@ class UsersScreen : View("Users Editor") {
                             textfield(model.lastName)
                         }
                         button("Update"){
+                            isDefaultButton = true
+                            setPrefSize(100.0, 10.0)
                             enableWhen(model.dirty)
                             action{
                                 update()
@@ -46,11 +51,15 @@ class UsersScreen : View("Users Editor") {
                         }
 
                         button("Delete") {
+                            isDefaultButton = true
+                            setPrefSize(100.0, 10.0)
                             action{
                                 delete()
                             }
                         }
                         button("Reset"){
+                            isDefaultButton = true
+                            setPrefSize(100.0, 10.0)
                             model.rollback()
                         }
                         button("Close"){

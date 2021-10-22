@@ -14,13 +14,15 @@ repositories {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testImplementation('org.junit.jupiter:junit-jupiter-api:5.4.2')
+    testRuntime('org.junit.jupiter:junit-jupiter-engine:5.4.2')
 
     implementation 'org.slf4j:slf4j-simple:1.6.1'
     implementation 'io.github.microutils:kotlin-logging:1.6.22'
     implementation "com.google.code.gson:gson:2.8.5"
 
     implementation 'no.tornado:tornadofx:1.7.18'
+
 }
 
 compileKotlin {
@@ -29,6 +31,7 @@ compileKotlin {
 compileTestKotlin {
     kotlinOptions.jvmTarget = "1.8"
 }
+
 
 test {
     useJUnitPlatform()

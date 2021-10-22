@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ModelTests" tests="7" skipped="0" failures="0" errors="0" timestamp="2021-10-22T14:57:24" hostname="DESKTOP-IJB4BCD" time="0.299">
+  <properties/>
+  <testcase name="attendConcert()" classname="ModelTests" time="0.058"/>
+  <testcase name="addConcerts()" classname="ModelTests" time="0.025"/>
+  <testcase name="addUser()" classname="ModelTests" time="0.023"/>
+  <testcase name="updateConcert()" classname="ModelTests" time="0.021"/>
+  <testcase name="updateUser()" classname="ModelTests" time="0.018"/>
+  <testcase name="deleteConcert()" classname="ModelTests" time="0.035"/>
+  <testcase name="deleteUser()" classname="ModelTests" time="0.019"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[99 [Test worker] INFO org.wit.concertApp.console.models.ConcertJSONStore - ConcertModel(concertId=-7305175240858291421, date=2020-04-23, headlineAct=The Beatles, url=www.Beatles.net, address=100 Beatles Road)
+105 [Test worker] INFO org.wit.concertApp.console.models.ConcertJSONStore - ConcertModel(concertId=-7305175240858291421, date=2020-04-23, headlineAct=The Beatles, url=www.Beatles.net, address=100 Beatles Road)
+105 [Test worker] INFO org.wit.concertApp.console.models.ConcertJSONStore - ConcertModel(concertId=-2660441347757711154, date=2000-11-13, headlineAct=The Rolling Stones, url=www.Rolling.com, address=23 Rolling Avenue)
+108 [Test worker] INFO org.wit.concertApp.console.models.UserJSONStore - UserModel(userId=6871988214605469446, firstName=Paul, lastName=Mccartney, upcomingConcerts=[])
+110 [Test worker] INFO org.wit.concertApp.console.models.UserJSONStore - UserModel(userId=6871988214605469446, firstName=Paul, lastName=Mccartney, upcomingConcerts=[])
+110 [Test worker] INFO org.wit.concertApp.console.models.UserJSONStore - UserModel(userId=4026885114194552446, firstName=Mick, lastName=Jagger, upcomingConcerts=[])
+123 [Test worker] INFO ModelTests - []
+127 [Test worker] INFO ModelTests - [-7305175240858291421]
+193 [Test worker] INFO org.wit.concertApp.console.models.ConcertJSONStore - ConcertModel(concertId=6232545544358295774, date=2020-04-23, headlineAct=The Beatles, url=www.Beatles.net, address=100 Beatles Road)
+195 [Test worker] INFO org.wit.concertApp.console.models.ConcertJSONStore - ConcertModel(concertId=6232545544358295774, date=2020-04-23, headlineAct=The Beatles, url=www.Beatles.net, address=100 Beatles Road)
+196 [Test worker] INFO org.wit.concertApp.console.models.ConcertJSONStore - ConcertModel(concertId=-328432026478815029, date=2000-11-13, headlineAct=The Rolling Stones, url=www.Rolling.com, address=23 Rolling Avenue)
+223 [Test worker] INFO org.wit.concertApp.console.models.UserJSONStore - UserModel(userId=-7754987514375685108, firstName=Paul, lastName=Mccartney, upcomingConcerts=[])
+225 [Test worker] INFO org.wit.concertApp.console.models.UserJSONStore - UserModel(userId=-7754987514375685108, firstName=Paul, lastName=Mccartney, upcomingConcerts=[])
+226 [Test worker] INFO org.wit.concertApp.console.models.UserJSONStore - UserModel(userId=487268025011002959, firstName=Mick, lastName=Jagger, upcomingConcerts=[])
+261 [Test worker] INFO org.wit.concertApp.console.models.ConcertJSONStore - ConcertModel(concertId=-7280278659534136089, date=2020-04-23, headlineAct=The Beatles, url=www.Beatles.net, address=100 Beatles Road)
+266 [Test worker] INFO org.wit.concertApp.console.models.ConcertJSONStore - ConcertModel(concertId=-7280278659534136089, date=2020-04-23, headlineAct=The Beatles, url=www.Beatles.net, address=100 Beatles Road)
+266 [Test worker] INFO org.wit.concertApp.console.models.ConcertJSONStore - ConcertModel(concertId=7243748839429054127, date=2000-11-13, headlineAct=The Rolling Stones, url=www.Rolling.com, address=23 Rolling Avenue)
+269 [Test worker] INFO org.wit.concertApp.console.models.ConcertJSONStore - ConcertModel(concertId=-7280278659534136089, date=2020-04-23, headlineAct=The Kinks, url=www.Kinks.gov, address=37 Sunnyvale)
+270 [Test worker] INFO org.wit.concertApp.console.models.ConcertJSONStore - ConcertModel(concertId=7243748839429054127, date=2000-11-13, headlineAct=The Rolling Stones, url=www.Rolling.com, address=23 Rolling Avenue)
+295 [Test worker] INFO org.wit.concertApp.console.models.UserJSONStore - UserModel(userId=-3822708102911267637, firstName=Paul, lastName=Mccartney, upcomingConcerts=[])
+296 [Test worker] INFO org.wit.concertApp.console.models.UserJSONStore - UserModel(userId=-3822708102911267637, firstName=Paul, lastName=Mccartney, upcomingConcerts=[])
+296 [Test worker] INFO org.wit.concertApp.console.models.UserJSONStore - UserModel(userId=163546731751447838, firstName=Mick, lastName=Jagger, upcomingConcerts=[])
+300 [Test worker] INFO org.wit.concertApp.console.models.UserJSONStore - UserModel(userId=-3822708102911267637, firstName=Test, lastName=Subject, upcomingConcerts=[])
+300 [Test worker] INFO org.wit.concertApp.console.models.UserJSONStore - UserModel(userId=163546731751447838, firstName=Mick, lastName=Jagger, upcomingConcerts=[])
+328 [Test worker] INFO org.wit.concertApp.console.models.ConcertJSONStore - ConcertModel(concertId=-1206829682764604218, date=2020-04-23, headlineAct=The Beatles, url=www.Beatles.net, address=100 Beatles Road)
+333 [Test worker] INFO org.wit.concertApp.console.models.ConcertJSONStore - ConcertModel(concertId=-1206829682764604218, date=2020-04-23, headlineAct=The Beatles, url=www.Beatles.net, address=100 Beatles Road)
+333 [Test worker] INFO org.wit.concertApp.console.models.ConcertJSONStore - ConcertModel(concertId=-183759008727562646, date=2000-11-13, headlineAct=The Rolling Stones, url=www.Rolling.com, address=23 Rolling Avenue)
+370 [Test worker] INFO org.wit.concertApp.console.models.UserJSONStore - UserModel(userId=4029234136866545179, firstName=Paul, lastName=Mccartney, upcomingConcerts=[])
+374 [Test worker] INFO org.wit.concertApp.console.models.UserJSONStore - UserModel(userId=4029234136866545179, firstName=Paul, lastName=Mccartney, upcomingConcerts=[])
+374 [Test worker] INFO org.wit.concertApp.console.models.UserJSONStore - UserModel(userId=8276903369857608842, firstName=Mick, lastName=Jagger, upcomingConcerts=[])
+]]></system-err>
+</testsuite>

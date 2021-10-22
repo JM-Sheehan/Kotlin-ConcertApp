@@ -55,17 +55,23 @@ class ConcertsScreen : View("Concerts Editor") {
                             textfield(model.url)
                         }
                         button("Update"){
+                            isDefaultButton = true
+                            setPrefSize(100.0, 10.0)
                             enableWhen(model.dirty)
                             action{
                                 update()
                             }
                         }
                         button("Delete"){
+                            isDefaultButton = true
+                            setPrefSize(100.0, 10.0)
                             action{
                                 delete()
                             }
                         }
                         button("Reset"){
+                            isDefaultButton = true
+                            setPrefSize(100.0, 10.0)
                             model.rollback()
                         }
 

@@ -9,7 +9,7 @@ import java.util.*
 
 private val logger = KotlinLogging.logger {}
 
-private val CONCERT_JSON_FILE = "concerts.json"
+var CONCERT_JSON_FILE = "concerts.json"
 val concertGsonBuilder = GsonBuilder().setPrettyPrinting().create()
 val concertListType = object : TypeToken<java.util.ArrayList<ConcertModel>>() {}.type
 
@@ -59,12 +59,12 @@ class ConcertJSONStore : ConcertStore{
         concerts.forEach { logger.info("${it}") }
     }
 
-    private fun serialize() {
+    fun serialize() {
         val jsonString = concertGsonBuilder.toJson(concerts, concertListType)
         write(CONCERT_JSON_FILE, jsonString)
     }
 
-    private fun deserialize() {
+    fun deserialize() {
         val jsonString = read(CONCERT_JSON_FILE)
         concerts = Gson().fromJson(jsonString, concertListType)
     }

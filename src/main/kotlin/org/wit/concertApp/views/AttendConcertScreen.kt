@@ -23,15 +23,15 @@ class AttendConcertScreen : View("Attend Concert View") {
 
     init{
         with(root) {
-            bottom{
-                hbox() {
-                    setPrefSize(1200.0, 100.0)
+            center{
+                vbox() {
+                    setPrefSize(190.0, 400.0)
                     alignment= Pos.CENTER
                     spacing =20.0
 
                     button("Add to Upcoming") {
                         isDefaultButton = true
-                        setPrefSize(100.0, 20.0)
+                        setPrefSize(160.0, 20.0)
                         action {
                             runAsyncWithProgress {
                                 attend()
@@ -40,7 +40,7 @@ class AttendConcertScreen : View("Attend Concert View") {
                     }
                     button("Close") {
                         isDefaultButton = true
-                        setPrefSize( 100.0, 20.0)
+                        setPrefSize( 160.0, 20.0)
                         action {
                             runAsyncWithProgress {
                                 concertUIController.closeAttendConcertScreen()
